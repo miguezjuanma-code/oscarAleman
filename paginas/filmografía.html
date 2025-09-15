@@ -19,19 +19,36 @@
 <body class="bg-warning">
 
   <!-- Header -->
-  <header class="position-fixed top-0 w-100 bg-dark text-white py-3 shadow" style="z-index:1030;">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <h1 class="text-uppercase text-danger mb-2 mb-md-0">Filmografía</h1>
-      <nav>
-        <ul class="nav justify-content-center flex-wrap">
-          <li class="nav-item"><a class="nav-link text-warning" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-warning" href="./biografía.html">Biografía</a></li>
-          <li class="nav-item"><a class="nav-link text-warning" href="./discografía.html">Discografía</a></li>
-          <li class="nav-item"><a class="nav-link text-warning active" href="./filmografía.html">Filmografía</a></li>
-        </ul>
-      </nav>
+<header class="position-fixed top-0 w-100 bg-black text-white shadow" style="z-index:1030;">
+  <nav class="navbar navbar-expand-md navbar-dark bg-black container">
+
+    <a class="navbar-brand text-uppercase text-danger fw-bold" href="#">Oscar Alemán</a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+      aria-controls="menu" aria-expanded="false" aria-label="Menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links del menú -->
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="./biografía.html">Biografía</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="./discografía.html">Discografía</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="./filmografía.html">Filmografía</a>
+        </li>
+      </ul>
     </div>
-  </header>
+  </nav>
+</header>
 
   <!-- Main -->
   <main class="container" style="padding-top:120px;">
@@ -46,10 +63,10 @@
     </p>
 
     <!-- Card -->
-    <section class="card bg-danger text-center mx-auto mb-5 shadow" style="max-width:50rem;">
+    <section class="card custom-card text-center mx-auto mb-5 shadow">
       <div class="card-body">
-        <h3 class="card-title">Lorem ipsum dolor sit.</h3>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quis soluta maxime nesciunt ipsa itaque repellat vero modi.</p>
+        <h3 class="card-title">Dejar testimonio.</h3>
+        <p class="card-text">Al dejar tu testimonio, creamos una comunidad donde enviamos noticias y shows que pueden interesarte..</p>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
           <button class="btn btn-secondary">Enviar mensaje</button>
           <a href="https://open.spotify.com/intl-es/artist/6WlZKlAR4zNkqXreMiZ2aK" target="_blank" rel="noopener" class="btn btn-outline-light">Escuchar</a>
@@ -59,7 +76,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-center py-4">
+  <footer class="bg-black text-center py-4">
     <h3 class="text-warning mb-3">Todos los derechos reservados.</h3>
     <a href="https://www.youtube.com/watch?v=yYf31_Km8F0" target="_blank" rel="noopener">
       <img src="../img/youtubeLogo.png" alt="Logo Youtube" class="img-fluid" style="width:50px; height:auto;">

@@ -1,0 +1,23 @@
+/* Cards */
+$color-danger: #aa1919;     
+$color-white: #fff;         
+$radius-md: 0.75rem;       
+
+%card-base {
+  background-color: $color-danger;
+  color: $color-white;
+  border: none;
+  border-radius: $radius-md;
+}
+
+.custom-card {
+  @extend %card-base;
+}
+
+.testimonial-card {
+  @extend %card-base;
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}

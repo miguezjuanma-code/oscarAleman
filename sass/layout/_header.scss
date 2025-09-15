@@ -1,0 +1,23 @@
+$color-black: #000;
+$color-white: #fff;
+$shadow-md: 0 4px 8px rgba(0,0,0,0.3);
+
+
+%header-base {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-black;
+  color: $color-white;
+  box-shadow: $shadow-md;
+  z-index: 1030;
+}
+
+
+.main-header {
+  @extend %header-base;
+}
+
+.intro-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}

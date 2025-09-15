@@ -1,0 +1,21 @@
+@import "./utilities/mixins";
+@import "./utilities/extends";
+@import "./utilities/variables";
+@import "./layout/header";
+@import "./layout/cards";
+@import "./layout/footer";
+
+
+/*Estilos Generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente */
+body {
+  font-family: "Michroma", sans-serif;
+  padding-top: 90px; 
+}
+

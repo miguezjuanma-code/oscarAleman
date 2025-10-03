@@ -3,90 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biografía de Oscar Alemán</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- SEO -->
+  <meta name="description" content="Biografía de Oscar Alemán, guitarrista argentino de jazz y figura clave en la música latinoamericana.">
+  <meta name="keywords" content="Oscar Alemán, biografía, jazz, guitarrista argentino, historia, música">
+  <meta name="author" content="Tu Nombre">
+
+  <title>Biografía | Oscar Alemán</title>
+  <link rel="icon" href="../img/favicon.png" type="image/png">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
 
   <!-- Estilos -->
   <link rel="stylesheet" href="../css/style.css" />
-
-  <style>
-    body {
-      padding-top: 110px; /* para que el header fijo no tape el contenido */
-      font-family: "Michroma", sans-serif;
-    }
-  </style>
 </head>
+
 <body class="bg-warning">
 
   <!-- Header -->
-<header class="position-fixed top-0 w-100 bg-black text-white shadow" style="z-index:1030;">
-  <nav class="navbar navbar-expand-md navbar-black bg-black container">
+  <header class="position-fixed top-0 w-100 bg-black text-white shadow main-header">
+    <nav class="navbar navbar-expand-md container">
+      <a class="navbar-brand text-uppercase text-danger fw-bold" href="../index.html">Oscar Alemán</a>
 
-    <a class="navbar-brand text-uppercase text-danger fw-bold" href="#">Oscar Alemán</a>
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Botón hamburguesa -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-      aria-controls="menu" aria-expanded="false" aria-label="Menú de navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Links del menú -->
-    <div class="collapse navbar-collapse justify-content-end" id="menu">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="../index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="./biografía.html">Biografía</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="./discografía.html">Discografía</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="./filmografía.html">Filmografía</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+      <!-- Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-warning" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-warning active" aria-current="page" href="./biografía.html">Biografía</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="./discografía.html">Discografía</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="./filmografía.html">Filmografía</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- Main -->
-  <main class="container my-4">
-    <!-- Texto principal -->
-    <div class="text-center mb-4">
-      <h2 class="fs-4 fs-md-3 fs-lg-2">
-        Nació en Machagai, Chaco, el 20 de febrero de 1909 y fue guitarrista, compositor, cantante y performer, especializado en jazz y ritmos brasileros fusionando el folklore argentino.
-      </h2>
-      <p>
-        Fue el cuarto de siete hijos de la pianista Marcela Pereira (indígena qom argentina) y de Jorge Alemán Moreira (nacido en Uruguay), que tocaba la guitarra en un cuarteto de arte nativo, integrado por sus propios hijos Carlos, Jorgelina y Juan. En 1915, con seis años de edad, se integra al conjunto familiar <strong>Sexteto Moreira</strong>. Allí se inicia bailando y cantando junto a sus hermanos. Es un conjunto folclórico de música y danzas nativas.
-      </p>
-    </div>
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Biografía de Oscar Alemán</h1>
+    <p>
+      Aquí colocás tu contenido de la biografía. Podés incluir texto en varios párrafos para contar la vida del artista, sus inicios, influencias, su carrera en Europa y en Argentina, y su legado en la música.
+    </p>
+    <p>
+      Ejemplo: Oscar Alemán nació en Machagai, Chaco, en 1909. Fue un guitarrista excepcional que fusionó el jazz con ritmos latinoamericanos...
+    </p>
 
-    <!-- Card central -->
-    <section class="card custom-card text-center mx-auto mb-5 shadow">
-      <div class="card-body">
-        <h3 class="card-title">Dejar testimonio.</h3>
-        <p class="card-text">
-          Al dejar tu testimonio, creamos una comunidad donde enviamos noticias y shows que pueden interesarte.
-        </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-          <button class="btn btn-secondary">Enviar mensaje</button>
-          <a href="https://open.spotify.com/intl-es/artist/6WlZKlAR4zNkqXreMiZ2aK" target="_blank" rel="noopener" class="btn btn-outline-light">Escuchar</a>
-        </div>
-      </div>
-    </section>
+    <figure class="text-center my-4">
+      <img src="../img/oscar2.jpg" alt="Oscar Alemán de niño" class="img-fluid rounded shadow">
+      <figcaption class="mt-2">Oscar Alemán en sus primeros años de carrera.</figcaption>
+    </figure>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-black text-center py-4">
-    <h3 class="text-warning mb-3">Todos los derechos reservados.</h3>
+  <footer class="footer text-center py-4">
+    <p class="text-warning mb-3">Todos los derechos reservados.</p>
     <a href="https://www.youtube.com/watch?v=yYf31_Km8F0" target="_blank" rel="noopener">
       <img src="../img/youtubeLogo.png" alt="Logo Youtube" class="img-fluid" style="width:50px; height:auto;">
     </a>

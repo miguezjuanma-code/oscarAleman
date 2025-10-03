@@ -1,21 +1,135 @@
-@import "./utilities/mixins";
-@import "./utilities/extends";
-@import "./utilities/variables";
-@import "./layout/header";
-@import "./layout/cards";
-@import "./layout/footer";
+/*Variables */
+$color-bg: #000;
+$color-primary: #aa1919;
+$color-accent: #ffc107;
+$color-text: #fff;
+$radius-md: 0.75rem;
+$font-main: "Michroma", sans-serif;
 
+/*Mixins*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm { @media (min-width: 576px) { @content; } }
+  @if $breakpoint == md { @media (min-width: 768px) { @content; } }
+  @if $breakpoint == lg { @media (min-width: 992px) { @content; } }
+  @if $breakpoint == xl { @media (min-width: 1200px) { @content; } }
+}
 
-/*Estilos Generales*/
+/* general*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fuente */
 body {
-  font-family: "Michroma", sans-serif;
+  font-family: $font-main;
+  background-color: $color-text;
+  color: $color-bg;
   padding-top: 90px; 
 }
 
+/*   Header*/
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-bg;
+  color: $color-text;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1030;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,193,7, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.intro-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  text-align: center;
+  margin: auto;
+}
+
+/* cards*/
+%card-base {
+  background-color: $color-primary;
+  color: $color-text;
+  border: none;
+  border-radius: $radius-md;
+}
+
+.custom-card {
+  @extend %card-base;
+  max-width: 720px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.testimonial-card {
+  @extend %card-base;
+  padding: 1.25rem;
+}
+
+/* footer*/
+.footer {
+  background-color: $color-bg;
+  color: $color-text;
+  img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* botones y efectos */
+.btn, button {
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover, button:hover {
+  transform: scale(1.05);
+  background-color: $color-accent;
+  color: $color-bg;
+}
+
+/* animaciones */
+.hero-img, .testimonial-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@include respond(sm) {
+  body { padding-top: 85px; }
+  .testimonial-card img.rounded-circle {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@include respond(md) {
+  body { padding-top: 88px; }
+  .hero-img { max-height: 52vh; border-radius: 0.5rem; }
+  .intro-text { font-size: 1.4rem; max-width: 900px; }
+  .custom-card { padding: 1.25rem; }
+}
+
+@include respond(lg) {
+  body { padding-top: 92px; }
+  .intro-text { font-size: 1.8rem; line-height: 1.45; }
+  .testimonial-card img.rounded-circle {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@include respond(xl) {
+  .hero-img { max-height: 60vh; }
+  .intro-text { font-size: 2rem; }
+}
